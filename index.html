@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="desdcription" content="freeCodeCamp Accessibility Quiz practice project" />
+    <link rel="stylesheet" href="index.css">
+    <title>Barcelona Questionnaire Quiz </title>
+</head>
+<body>
+    <img id="logo" src="../image/download.jpg">
+    <header>
+        <h1>FC Barcelona</h1>
+        <nav>
+            <ul>
+                <li><a accesskey="a" href="#fans-info">INFO</a></li>
+                <li><a accesskey="a" href="#players-questions"> OUR PLAYERS</a></li>
+                <li><a accesskey="a" href="#management-questions">THE MANAGEMENT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form method="post" action="https://www.fcbarcelona.com/en/">
+            <section role="region" aria-labelledby="fans-info">
+                <h2 id="fans-info">Fans Info</h2>
+            <div class="info">
+                <label for="fans-name">Name:</label>
+                <input type="name" name="name" id="student-name" />
+            </div>
+            <div class="info">
+                <label for="fans-email">Email:</label>
+                <input type="email" name="email" id="fans-email" />
+            </div>
+            <div class="info">
+                <label for="birth-date">D.O.B:<span class="sr-only"></span></label>
+                <input type="date" name="date" id="birth-date" />
+            </div>
+            </section>
+            <section role="region" aria-labelledby="players-questions">
+                <h2 id="players-questions"> Our Players</h2>
+            <div class="question-block">
+                <p>1</p>
+                <fieldset name="player-question-1" class="question">
+                    <legend>Messi, the greatest Barcelona legend was born in June.</legend>
+                    <ul class="answers-list">
+                        <li><label for="q1-a1"><input name="q1" value="true" id="q1-a1" type="radio">True</label></li>
+                        <li><label for="q1-a2"><input name="q1" value="false" id="q1-a2" type="radio">False</label></li>
+                    </ul>
+                </fieldset>
+            </div>
+            <div class="question-block">
+                <p>2</p>
+                <fieldset name="player-question-2" class="question">
+                    <legend>Lionel Messi passed the ball to Luis Suarez in his famous penalty assist against Espanyol.</legend>
+                    <ul class="answers-list">
+                        <li><label for="q2-a1"><input name="q2" value="true" id="q2-a1" type="radio">True</label></li>
+                        <li><label for="q2-a2"><input name="q2" value="false" id="q2-a2" type="radio">False</label></li>
+                    </ul>
+                </fieldset>
+            </div>
+            </section>
+            <section role="region" aria-labelledby="management-questions">
+                <h2 id="management-questions"> The Management Board</h2>
+            <div class="formrow">
+                <div class="question-block">
+                    <label>What is the name of the President of FC Barcelona?</label>
+                </div>
+                <div class="answer">
+                <select required>
+                    <option value="">Select an option</option>
+                    <option value="florentino-perez">Florentino Perez</option>
+                    <option value="jo.an-laporta">Joan Laporta</option>
+                </select>
+            </div>
+            <div class="question-block">
+                <label for="management-questions">What do you like about our President and his board?</label>
+            </div>
+            <div class="answer">
+                <textarea id="management-questions" name="management-questions" rows="5" cols="50" placeholder="He is a..."></textarea>
+            </div>
+            </div>
+            </section>
+            <button type="submit">Send</button>
+        </form>
+    </main>
+    <footer>
+        <address>
+            <a accesskey="a" href="https://www.fcbarcelona.com/en/">FC Barcelona</a><br />
+            Barcelona<br/>
+            Catalonia<br/>
+            Spain
+        </address>
+    </footer>
+</body>
+</html>
